@@ -80,6 +80,13 @@
         </a>
       </li>
     </ul>
+    <my-component/>
+    <ul>
+      <li v-for="{ id, name } in list" v-bind:key="id">{{name}}</li>
+    </ul>
+    <ul>
+      <li v-for="item in list" v-bind:key="item.id">{{item.name}}</li>
+    </ul>
   </div>
 </template>
 
@@ -88,7 +95,14 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      list: [
+        {id: 1, name: 'Apple', price: 100},
+        {id: 2, name: 'Banana', price: 200},
+        {id: 3, name: 'Strawberry', price: 400},
+        {id: 4, name: 'Orange', price: 300},
+        {id: 5, name: 'Melon', price: 500}
+      ]
     }
   }
 }
