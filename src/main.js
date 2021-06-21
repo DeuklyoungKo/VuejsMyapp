@@ -1,8 +1,10 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import 'babel-polyfill'
 import Vue from 'vue'
 import Vuex from 'vuex'
 import App from './App'
+import store from '@/store.js'
 
 Vue.config.productionTip = false
 
@@ -48,6 +50,7 @@ Vue.component('my-component', {
 /* eslint-disable no-new */
 var example = new Vue({
   el: '#app',
+  store,
   components: { App },
   template: '<App/>',
   methods: {
@@ -58,3 +61,8 @@ var example = new Vue({
 })
 
 example.funcTest()
+console.log('store.state.count : ' + store.state.count)
+store.commit('increment')
+console.log('store.state.count : ' + store.state.count)
+// store.dispatch('testAction')
+console.log('store.getters.max : ' + store.getters.max)
