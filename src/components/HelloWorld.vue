@@ -106,15 +106,15 @@ export default {
     }
   },
   created () {
-    console.log('HelloWorld created : this.$store.state.count :' + this.$store.state.count)
-    console.log('HelloWorld created : this.$store.getters.count :' + this.$store.getters.count)
-    console.log('HelloWorld created : this.$store.getters.item(1) :' + this.$store.getters.item(1))
-    console.log('HelloWorld created : this.$store.getters.name(1) :' + this.$store.getters.name(1))
-    this.$store.commit('mutationType', 44)
-    console.log('HelloWorld created : this.$store.getters.count 1:' + this.$store.getters.count)
-    console.log('this.$store.dispatch(actionType)')
-    this.$store.dispatch('actionType', 66)
-    console.log('HelloWorld created : this.$store.getters.count 2:' + this.$store.getters.count)
+    // console.log('HelloWorld created : this.$store.state.count :' + this.$store.state.count)
+    // console.log('HelloWorld created : this.$store.getters.count :' + this.$store.getters.count)
+    // console.log('HelloWorld created : this.$store.getters.item(1) :' + this.$store.getters.item(1))
+    // console.log('HelloWorld created : this.$store.getters.name(1) :' + this.$store.getters.name(1))
+    // this.$store.commit('mutationType', 44)
+    // console.log('HelloWorld created : this.$store.getters.count 1:' + this.$store.getters.count)
+    // console.log('this.$store.dispatch(actionType)')
+    // this.$store.dispatch('actionType', 66)
+    // console.log('HelloWorld created : this.$store.getters.count 2:' + this.$store.getters.count)
   }
 
 }
